@@ -21,7 +21,7 @@ app.get("/", (req,res)=>{
     res.send("Hello world");
 })
 const start = async ()=>{
-    const connectionDB = await mongoose.connect("mongodb+srv://weChat:GQW2xpJBUU7CKUYV@wechat.jmunmgu.mongodb.net/?appName=WeChat")
+    const connectionDB = await mongoose.connect("mongodb+srv://weChat:<dbpassword>@wechat.jmunmgu.mongodb.net/?appName=WeChat")
     console.log(`Mongo connected DB host : ${connectionDB.connection.host}`);
 server.listen(app.get("port"), ()=> {
     console.log("The server has started");
